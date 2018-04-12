@@ -10,6 +10,7 @@ env:
 cache:
   directories:
   - node_modules
+  - $TRAVIS_BUILD_DIR/../obs-studio
 
 matrix:
   include:
@@ -33,9 +34,13 @@ matrix:
     - docker exec -it xenial /root/obs-websocket/CI/package-xenial.sh
 
   - os: osx
-    env: _macos_build
+    env:
+    - _macos_build
+    - obsPath="$TRAVIS_BUILD_DIR/../obs-studio"
     osx_image: xcode8.3
-    before_install: "./CI/install-dependencies-macos.sh"
+    before_install:
+    - "./CI/install-dependencies-macos.sh"
+    - "./CI/install-build-obs-macos.sh"
     script: "./CI/build-macos.sh"
     after_success: 
     - ./CI/package-macos.sh
