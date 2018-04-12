@@ -8,7 +8,6 @@ if [ -d "$PWD/../obs-studio/libobs" ]; then echo LIBOBS_INCLUDE_DIR exists; fi
 if [ -f "$PWD/../obs-studio/build/libobs/libobs.dylib" ]; then echo LIBOBS_LIB exists; fi
 if [ -f "$PWD/../obs-studio/build/UI/obs-frontend-api/libobs-frontend-api.dylib" ]; then echo OBS_FRONTEND_LIB exists; fi
 
-
 mkdir build && cd build
 cmake -DQTDIR=/usr/local/opt/qt \
   -DLIBOBS_INCLUDE_DIR=../../obs-studio/libobs \
