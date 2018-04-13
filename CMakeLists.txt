@@ -36,7 +36,9 @@ message("LIBOBS_INCLUDE_DIR: ${LIBOBS_INCLUDE_DIR}")
 message("INCLUDED_LIBOBS_CMAKE_MODULES: ${INCLUDED_LIBOBS_CMAKE_MODULES}")
 message("LibObs_DIR: ${LibObs_DIR}")
 
+if (UNIX AND NOT APPLE)
 find_package(LibObs REQUIRED)
+endif()
 
 message("obsPath: ${obsPath}")
 message("env obsPath: $ENV{obsPath}")
