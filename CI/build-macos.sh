@@ -24,6 +24,7 @@ find /usr/share -name libobs-config.cmake
 find /usr/lib -name obs-module.h
 find /usr/local -name obs-module.h
 find /usr/share -name obs-module.h
+echo dunno
 
 mkdir build && cd build
 cmake -DQTDIR=/usr/local/opt/qt \
