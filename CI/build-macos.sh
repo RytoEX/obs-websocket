@@ -14,6 +14,8 @@ find "$HOME" -name FindLibobs.cmake
 find "$HOME" -name FindLibObs.cmake
 find "$HOME" -name LibObsConfig.cmake
 find "$HOME" -name libobs-config.cmake
+find /usr -name LibObsConfig.cmake
+find /usr -name libobs-config.cmake
 
 mkdir build && cd build
 cmake -DQTDIR=/usr/local/opt/qt \
