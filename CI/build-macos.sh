@@ -15,15 +15,30 @@ find "$HOME" -name FindLibObs.cmake
 find "$HOME" -name LibObsConfig.cmake
 find "$HOME" -name libobs-config.cmake
 find "$HOME" -name obs-module.h
+find /usr/include -name FindLibObs.cmake
+find /usr/lib -name FindLibObs.cmake
+find /usr/local -name FindLibObs.cmake
+find /usr/share -name FindLibObs.cmake
+find /usr/include -name FindLibobs.cmake
+find /usr/lib -name FindLibobs.cmake
+find /usr/share -name FindLibobs.cmake
+find /usr/local -name FindLibobs.cmake
+find /usr/include -name LibObsConfig.cmake
 find /usr/lib -name LibObsConfig.cmake
 find /usr/local -name LibObsConfig.cmake
 find /usr/share -name LibObsConfig.cmake
+find /usr/include -name libobs-config.cmake
 find /usr/lib -name libobs-config.cmake
 find /usr/local -name libobs-config.cmake
 find /usr/share -name libobs-config.cmake
+find /usr/include -name obs-module.h
 find /usr/lib -name obs-module.h
 find /usr/local -name obs-module.h
 find /usr/share -name obs-module.h
+find /usr/include -name "libobs*"
+find /usr/lib -name "libobs*"
+find /usr/local -name "libobs*"
+find /usr/share -name "libobs*"
 echo dunno
 
 mkdir build && cd build
