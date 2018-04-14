@@ -36,7 +36,8 @@ message("LIBOBS_INCLUDE_DIR: ${LIBOBS_INCLUDE_DIR}")
 message("INCLUDED_LIBOBS_CMAKE_MODULES: ${INCLUDED_LIBOBS_CMAKE_MODULES}")
 message("LibObs_DIR: ${LibObs_DIR}")
 
-find_package(LibObs)
+#find_package(LibObs)
+find_package(Libobs)
 
 message("obsPath: ${obsPath}")
 message("env obsPath: $ENV{obsPath}")
