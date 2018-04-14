@@ -42,11 +42,11 @@ find /usr/share -name "libobs*"
 echo dunno
 
 mkdir build && cd build
-cmake -DQTDIR=/usr/local/opt/qt \
+cmake .. \
+  -DQTDIR=/usr/local/opt/qt \
   -DLIBOBS_INCLUDE_DIR=../../obs-studio/libobs \
   -DLibObs_DIR=../../obs-studio/build/libobs \
   -DOBS_FRONTEND_LIB="$(pwd)/../../obs-studio/build/UI/obs-frontend-api/libobs-frontend-api.dylib" \
   -DCMAKE_BUILD_TYPE=RelWithDebInfo \
   -DCMAKE_INSTALL_PREFIX=/usr \
-  .. \
 && make -j4
