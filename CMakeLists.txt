@@ -19,6 +19,7 @@ foreach (_variableName ${_variableNames})
     message(STATUS "${_variableName}=${${_variableName}}")
 endforeach()
 execute_process(COMMAND "${CMAKE_COMMAND}" "-E" "environment")
+message("now what?")
 
 find_package(LibObs)
 
