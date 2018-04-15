@@ -1,6 +1,9 @@
 #!/bin/sh
 set -ex
 
+# Make sure ccache is found
+export PATH="/usr/local/opt/ccache/libexec:$PATH"
+
 # Build obs-studio
 cd ..
 git clone https://github.com/obsproject/obs-studio
