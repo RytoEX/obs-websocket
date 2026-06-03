@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.28...3.30)
 
+set(CMAKE_CXX_STANDARD 17)
+
 set(obs-websocket_VERSION 5.7.4)
 set(OBS_WEBSOCKET_RPC_VERSION 1)
 
@@ -134,8 +136,6 @@ target_sources(obs-websocket PRIVATE plugin-macros.generated.h)
 target_compile_definitions(
   obs-websocket PRIVATE ASIO_STANDALONE $<$<BOOL:${PLUGIN_TESTS}>:PLUGIN_TESTS>
                         $<$<PLATFORM_ID:Windows>:_WEBSOCKETPP_CPP11_STL_> $<$<PLATFORM_ID:Windows>:_WIN32_WINNT=0x0603>)
-
-target_compile_features(obs-websocket PUBLIC cxx_std_17)
 
 target_compile_options(
   obs-websocket
