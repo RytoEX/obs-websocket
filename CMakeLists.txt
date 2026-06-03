@@ -135,6 +135,8 @@ target_compile_definitions(
   obs-websocket PRIVATE ASIO_STANDALONE $<$<BOOL:${PLUGIN_TESTS}>:PLUGIN_TESTS>
                         $<$<PLATFORM_ID:Windows>:_WEBSOCKETPP_CPP11_STL_> $<$<PLATFORM_ID:Windows>:_WIN32_WINNT=0x0603>)
 
+target_compile_features(obs-websocket PRIVATE cxx_std_17)
+
 target_compile_options(
   obs-websocket
   PRIVATE $<$<PLATFORM_ID:Windows>:/wd4267>
